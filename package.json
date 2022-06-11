@@ -4,7 +4,7 @@
 	"description": "Big Huge Scripts (.bhs) Language Server Extension for Visual Studio Code",
 	"author": "Nicholas Sjöqvist Obucina <nicholas.obucina@hotmail.com>",
 	"license": "MIT",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nicholasob/bhs_lsp.git"
@@ -76,13 +76,13 @@
 		"configuration": {
 			"title": "Rise Of Nations Scripting",
 			"properties": {
-			  "bhs.validationMethod": {
-				"type": "boolean",
-				"default": true,
-				"description": "Whether to validate the document on every change made. Default is turned off, i.e on every save."
-			  }
+				"bhs.validationMethod": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to validate the document on every change made. Default is turned off, i.e on every save."
+				}
 			}
-		  }
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
