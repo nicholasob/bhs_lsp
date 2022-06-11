@@ -1,0 +1,22 @@
+{
+	"name": "bhs",
+	"description": "Big Huge Scripts (.bhs) Language Server Extension for Visual Studio Code - The server side",
+	"author": "Nicholas Sjöqvist Obucina <nicholas.obucina@hotmail.com>",
+	"license": "MIT",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/"
+	},
+	"bugs": {
+		"url": "https://github.com//issues"
+	},
+	"engines": {
+		"node": "*"
+	},
+	"dependencies": {
+		"vscode-languageserver": "^7.0.0",
+		"vscode-languageserver-textdocument": "^1.0.1"
+	},
+	"scripts": {}
+}

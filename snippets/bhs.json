@@ -1,0 +1,235 @@
+{
+  "template": {
+    "prefix": "!template",
+    "body": [
+      "labels {",
+      "    RESOURCE_TYPES_FOOD = \"Food\",",
+      "    RESOURCE_TYPES_TIMBER = \"Timber\",",
+      "    RESOURCE_TYPES_METAL = \"Metal\",",
+      "    RESOURCE_TYPES_OIL = \"Oil\",",
+      "    RESOURCE_TYPES_WEALTH = \"Wealth\",",
+      "    RESOURCE_TYPES_KNOWLEDGE = \"Knowledge\"",
+      "}",
+      "",
+      "labels {",
+      "    UNIT_CATEGORIES_FOOT = \"Foot\",",
+      "    UNIT_CATEGORIES_MOUNTED = \"Mounted\",",
+      "    UNIT_CATEGORIES_MECH = \"Mech\",",
+      "    UNIT_CATEGORIES_ARTILLERY = \"Artillery\",",
+      "    UNIT_CATEGORIES_COMMAND = \"Command\",",
+      "    UNIT_CATEGORIES_CIVILIAN = \"Civilian\",",
+      "    UNIT_CATEGORIES_SAIL = \"Sail\",",
+      "    UNIT_CATEGORIES_NAVAL = \"Naval\",",
+      "    UNIT_CATEGORIES_AIR = \"Air\"",
+      "}",
+      "",
+      "labels {",
+      "    NATION_INDEX_RED = 1,",
+      "    NATION_INDEX_BLUE = 2,",
+      "    NATION_INDEX_PURPLE = 3,",
+      "    NATION_INDEX_GREEN = 4,",
+      "    NATION_INDEX_YELLOW = 5,",
+      "    NATION_INDEX_LIGHT_BLUE = 6,",
+      "    NATION_INDEX_GRAY = 7,",
+      "    NATION_INDEX_ORANGE = 8",
+      "}",
+      "",
+      "labels {",
+      "    ZOOM_LEVEL_FAR_OUT = 4,",
+      "    ZOOM_LEVEL_MEDIUM = 5,",
+      "    ZOOM_LEVEL_CLOSE_IN = 6",
+      "}",
+      "",
+      "labels {",
+      "    ANIMATION_ID_NO_ANIMATION = 1,",
+      "    ANIMATION_ID_STABBED = 2,",
+      "    ANIMATION_ID_SHOT = 3,",
+      "    ANIMATION_ID_EXPLODED = 4",
+      "}",
+      "",
+      "labels {",
+      "    DIFFICULTIES_EASIEST = 1,",
+      "    DIFFICULTIES_EASY = 2,",
+      "    DIFFICULTIES_MODERATE = 3,",
+      "    DIFFICULTIES_TOUGH = 4,",
+      "    DIFFICULTIES_TOUGHER = 5,",
+      "    DIFFICULTIES_TOUGHEST = 6",
+      "}",
+      "",
+      "labels {",
+      "    RUSH_RULES_STANDARD = 0,",
+      "    RUSH_RULES_PEACE_UNTIL_CLASSICAL = 1,",
+      "    RUSH_RULES_PEACE_UNTIL_MEDIEVAL = 2,",
+      "    RUSH_RULES_PEACE_UNTIL_GUNPOWDER = 3,",
+      "    RUSH_RULES_PEACE_UNTIL_ENLIGHTENMENT = 4,",
+      "    RUSH_RULES_PEACE_UNTIL_INDUSTRIAL = 5,",
+      "    RUSH_RULES_PEACE_UNTIL_MODERN = 6,",
+      "    RUSH_RULES_PEACE_UNTIL_INFORMATION = 7,",
+      "    RUSH_RULES_NON_VIOLENT = 8,",
+      "    RUSH_RULES_PEACE_FOR_FIRST_2_MINUTES = 9,",
+      "    RUSH_RULES_PEACE_FOR_FIRST_5_MINUTES = 10,",
+      "    RUSH_RULES_PEACE_FOR_FIRST_10_MINUTES = 11,",
+      "    RUSH_RULES_PEACE_FOR_FIRST_15_MINUTES = 12,",
+      "    RUSH_RULES_PEACE_FOR_FIRST_20_MINUTES = 13,",
+      "    RUSH_RULES_PEACE_FOR_FIRST_30_MINUTES = 14",
+      "}",
+      "",
+      "labels {",
+      "    AGES_ANCIENT = 1,",
+      "    AGES_CLASSICAL = 2,",
+      "    AGES_MEDIEVAL = 3,",
+      "    AGES_GUNPOWDER = 4,",
+      "    AGES_ENLIGHTENMENT = 5,",
+      "    AGES_INDUSTRIAL = 6,",
+      "    AGES_MODERN = 7,",
+      "    AGES_INFORMATION = 8",
+      "}",
+      "",
+      "labels {",
+      "    STARTING_RESOURCES_LOW = 0,",
+      "    STARTING_RESOURCES_STANDARD = 1,",
+      "    STARTING_RESOURCES_X2 = 2,",
+      "    STARTING_RESOURCES_X3 = 3,",
+      "    STARTING_RESOURCES_X5 = 4,",
+      "    STARTING_RESOURCES_X10 = 5,",
+      "    STARTING_RESOURCES_X20 = 6,",
+      "    STARTING_RESOURCES_DEATHMATCH = 7,",
+      "    STARTING_RESOURCES_INFINITE = 8,",
+      "    STARTING_RESOURCES_VARIABLE_LOW = 9,",
+      "    STARTING_RESOURCES_VARIABLE_MEDIUM = 10,",
+      "    STARTING_RESOURCES_VARIABLE_HIGH = 11,",
+      "    STARTING_RESOURCES_RANDOM = 12",
+      "}",
+      "",
+      "labels {",
+      "    STARTING_CITY_SIZES_NOMAD = 0,",
+      "    STARTING_CITY_SIZES_SMALL_CITY_ONLY = 1,",
+      "    STARTING_CITY_SIZES_STANDARD = 2,",
+      "    STARTING_CITY_SIZES_LARGE_CITY = 3",
+      "}",
+      "",
+      "scenario{",
+      " labels {",
+      "   //Add any constant labels here in a comma separated list.",
+      " }",
+      "",
+      " run_once {",
+      "   //Insert commands that should be executed only once when the script is loaded here.",
+      " }",
+      "",
+      "}"
+    ],
+    "description": "Insert a variable"
+  },
+  "Insert if": {
+    "prefix": "if",
+    "body": [
+      "if (${1:statement}) {",
+      "\t${2:// do something}",
+      "} else {",
+      "\t${3:// do something else}",
+      "}"
+    ],
+    "description": "Insert an if statement"
+  },
+  "Insert trigger": {
+    "prefix": "trigger",
+    "body": [
+      "trigger ${1:some_name}(${2:condition}) {",
+      "\t${2:// Some commands here...}",
+      "}"
+    ],
+    "description": "Insert an trigger statement"
+  },
+  "Enable trigger": {
+    "prefix": "enable_trigger",
+    "body": [
+      "enable_trigger(${1:some_name});"
+    ],
+    "description": "Enable a trigger"
+  },
+  "Disable trigger": {
+    "prefix": "disable_trigger",
+    "body": [
+      "disable_trigger(${1:some_name});"
+    ],
+    "description": "Disable a trigger"
+  },
+  "Enable all triggers": {
+    "prefix": "enable_all_triggers",
+    "body": [
+      "enable_all_triggers();"
+    ],
+    "description": "Enable all the triggers"
+  },
+  "Disable all triggers": {
+    "prefix": "disable_all_triggers",
+    "body": [
+      "disable_all_triggers();"
+    ],
+    "description": "Disable all the triggers"
+  },
+  "Scenario": {
+    "prefix": "scenario",
+    "body": [
+      "scenario {",
+      "labels {\n\t${2://Add any constant labels here in a comma separated list.}\n}",
+      "",
+      "run_once {\n\t${2://Insert commands that should be executed only once when the script is loaded here.}\n}",
+      "}"
+    ],
+    "description": "The main scenario block"
+  },
+  "Run once": {
+    "prefix": "run_once",
+    "body": [
+      "run_once {\n\t${2://Insert commands that should be executed only once when the script is loaded here.}\n}"
+    ],
+    "description": "The run_once block"
+  },
+  "Labels": {
+    "prefix": "labels",
+    "body": [
+      "labels {\n\t${2://Add any constant labels here in a comma separated list.}\n}"
+    ],
+    "description": "The labels block"
+  },
+  "Insert while": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${2:// do something}",
+      "}"
+    ],
+    "description": "Insert a while loop"
+  },
+  "Insert for loop": {
+    "prefix": "for",
+    "body": [
+      "for(${1:init}; ${2:condition}; ${3:increment}){",
+      "\t${4:// do something}",
+      "}"
+    ],
+    "description": "Insert a variable"
+  },
+  "Insert switch statement": {
+    "prefix": "switch",
+    "body": [
+      "switch(${1:expression}){",
+      "\tcase(${2:constant1}):",
+      "\t\t${3:// statements}",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\t${4:// default statements}",
+      "}"
+    ],
+    "description": "Insert a variable"
+  },
+  "Insert include": {
+    "prefix": "include",
+    "body": [
+      "include \"${1:scriptPath}\""
+    ],
+    "description": "Insert an include"
+  }
+}

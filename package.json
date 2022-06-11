@@ -1,0 +1,108 @@
+{
+	"name": "bhs",
+	"displayName": "Rise Of Nations Scripting",
+	"description": "Big Huge Scripts (.bhs) Language Server Extension for Visual Studio Code",
+	"author": "Nicholas Sjöqvist Obucina <nicholas.obucina@hotmail.com>",
+	"license": "MIT",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/"
+	},
+	"publisher": "nicholasob",
+	"categories": [],
+	"keywords": [
+		"bhs",
+		"RoN",
+		"Rise Of Nations",
+		"Rise Of Nations lsp",
+		"Rise Of Nations Scripting",
+		"Big Huge Scripts",
+		"Rise-Of-Nations",
+		"RiseOfNations",
+		"syntax-highlighting",
+		"language-server",
+		"language server protocol",
+		"lsp"
+	],
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"activationEvents": [
+		"onLanguage:bhs"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+		"breakpoints": [
+			{
+				"language": "c"
+			},
+			{
+				"language": "cpp"
+			}
+		],
+		"languages": [
+			{
+				"id": "bhs",
+				"aliases": [
+					"Rise Of Nations",
+					"bhs"
+				],
+				"extensions": [
+					".bhs"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"configurationDefaults": {
+			"[bhs]": {
+				"editor.insertSpaces": true,
+				"editor.tabSize": 4
+			}
+		},
+		"grammars": [
+			{
+				"language": "bhs",
+				"scopeName": "source.cpp",
+				"path": "./syntaxes/cpp.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "bhs",
+				"path": "./snippets/bhs.json"
+			}
+		],
+		"configuration": {
+			"title": "Rise Of Nations Scripting",
+			"properties": {
+			  "bhs.validationMethod": {
+				"type": "boolean",
+				"default": true,
+				"description": "Whether to validate the document on every change made. Default is turned off, i.e on every save."
+			  }
+			}
+		  }
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"devDependencies": {
+		"@types/mocha": "^8.2.2",
+		"@types/node": "^12.12.0",
+		"@typescript-eslint/eslint-plugin": "^4.23.0",
+		"@typescript-eslint/parser": "^4.23.0",
+		"esbuild": "^0.14.42",
+		"eslint": "^7.26.0",
+		"mocha": "^8.3.2",
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"vsce": "^2.9.1"
+	}
+}
