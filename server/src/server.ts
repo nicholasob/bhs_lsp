@@ -133,11 +133,6 @@ documents.onDidClose(e => {
 	documentSettings.delete(e.document.uri);
 });
 
-documents.onDidOpen(async e => {
-	const settings = await getDocumentSettings(e.document.uri);
-	console.log(settings);
-});
-
 
 connection.onDidChangeConfiguration((change) => {
     //const settings = <Settings>change.settings;
@@ -665,17 +660,17 @@ connection.onCompletionResolve(
 		while (end < text.length && /[a-zA-Z0-9_(]/.test(text[end])) {
 			end++;
 
-			if (text.substring(end - 1, 1) === '(') {
+			if (text.substring(end - 1, end) === '(') {
 				return {
 					type: 'function',
-					word: text.substring(start + 1, end - start - 1)
+					word: text.substring(start + 1, end - 1)
 				};
 			}
 		}
 
 		return {
 			type: 'default',
-			word: text.substring(start + 1, end - start - 1)
+			word: text.substring(start + 1, end - 1)
 		};
 };
 
