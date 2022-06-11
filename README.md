@@ -15,6 +15,7 @@ Important: Keep in mind that by default the fetching of variables and diagnostic
 
 A template is available by inputting ´!template´ into the editor. The template provides a lot of labels that are relevant to some of the internal RoN functions. I refer to the documentation if unsure about any of the parameters (down below).
 
+[Documentation](files/scenario_editor_docs.zip)
 
 ## LICENSE
-This extension is licensed under the MIT License
+This extension is licensed under the [MIT License](LICENSE.md)

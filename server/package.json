@@ -6,10 +6,7 @@
 	"version": "1.0.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/"
-	},
-	"bugs": {
-		"url": "https://github.com//issues"
+		"url": "https://github.com/nicholasob/bhs_lsp.git"
 	},
 	"engines": {
 		"node": "*"
