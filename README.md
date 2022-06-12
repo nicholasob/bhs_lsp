@@ -7,7 +7,7 @@ A language server that provides support for the development of Big Huge Scripts,
 This Language Server works for Big Huge Script files (.bhs). It has the following language features:
 - Auto-Completion for internal RoN functions with a rather brief description of its functionality. All the relevant data has been automatically extracted from the scripting documentation (see section General). It might be necessary to retrigger the suggestion widget by pressing CTRL + SPACE.
 - Auto-Completion for custom functions, labels, and variables declared by the user. The language server has the current position in respect when fetching suggestion variables, i.e variables that are out of scope and not accessible within the current block will not be included. 
-- Diagnostics with warnings and errors for already declared variables and custom functions.
+- Diagnostics with warnings and errors for already declared variables, custom functions, or if there is an uneven match of brackets.
 
 Important: Keep in mind that by default the fetching of variables and diagnostics will occur on every file change. There is an option in the settings to change this to only occur when a file save is done, which is necessary as the file sizes expand or if the computation is performance-critical because of hardware or other factors. 
 
