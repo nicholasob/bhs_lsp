@@ -26,7 +26,7 @@
 		"lsp"
 	],
 	"engines": {
-		"vscode": "^1.43.0"
+		"vscode": "^1.60.0"
 	},
 	"activationEvents": [
 		"onLanguage:bhs"
@@ -63,8 +63,8 @@
 		"grammars": [
 			{
 				"language": "bhs",
-				"scopeName": "source.cpp",
-				"path": "./syntaxes/cpp.tmLanguage.json"
+				"scopeName": "source.bhs",
+				"path": "./syntaxes/bhs.tmLanguage.json"
 			}
 		],
 		"snippets": [
@@ -79,7 +79,7 @@
 				"bhs.validationMethod": {
 					"type": "boolean",
 					"default": true,
-					"description": "Whether to validate the document on every change made. Default is turned off, i.e on every save."
+					"description": "Enable automatic diagnostics after document changes. Enabled by default."
 				}
 			}
 		}
@@ -100,9 +100,14 @@
 		"esbuild": "^0.14.42",
 		"eslint": "^7.26.0",
 		"mocha": "^8.3.2",
-		"typescript": "^4.3.5"
+		"typescript": "^4.3.5",
+		"vscode": "^1.1.37"
 	},
 	"dependencies": {
-		"vsce": "^2.9.1"
+		"vsce": "^2.9.1",
+		"vscode-languageclient": "^9.0.1",
+		"vscode-languageserver": "^8.1.0",
+		"vscode-languageserver-protocol": "^3.17.5",
+		"vscode-languageserver-textdocument": "^1.0.12"
 	}
 }
