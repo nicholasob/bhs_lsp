@@ -1,4 +1,5 @@
 .vscode/**
+files/**
 **/*.ts
 **/*.map
 .gitignore
