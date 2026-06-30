@@ -109,17 +109,17 @@
       "}",
       "",
       "scenario{",
-      " labels {",
-      "   //Add any constant labels here in a comma separated list.",
-      " }",
+      "    labels {",
+      "        //Add any constant labels here in a comma separated list.",
+      "    }",
       "",
-      " run_once {",
-      "   //Insert commands that should be executed only once when the script is loaded here.",
-      " }",
+      "    run_once {",
+      "        //Insert commands that should be executed only once when the script is loaded here.",
+      "    }",
       "",
       "}"
     ],
-    "description": "Insert a variable"
+    "description": "Insert a scenario script template"
   },
   "Insert if": {
     "prefix": "if",
@@ -136,7 +136,7 @@
     "prefix": "trigger",
     "body": [
       "trigger ${1:some_name}(${2:condition}) {",
-      "\t${2:// Some commands here...}",
+      "\t${3:// Some commands here...}",
       "}"
     ],
     "description": "Insert an trigger statement"
@@ -173,9 +173,13 @@
     "prefix": "scenario",
     "body": [
       "scenario {",
-      "labels {\n\t${2://Add any constant labels here in a comma separated list.}\n}",
+      "\tlabels {",
+      "\t\t${1:// Add constant labels here in a comma-separated list.}",
+      "\t}",
       "",
-      "run_once {\n\t${2://Insert commands that should be executed only once when the script is loaded here.}\n}",
+      "\trun_once {",
+      "\t\t${2:// Add commands that execute once when the script loads.}",
+      "\t}",
       "}"
     ],
     "description": "The main scenario block"
@@ -183,14 +187,18 @@
   "Run once": {
     "prefix": "run_once",
     "body": [
-      "run_once {\n\t${2://Insert commands that should be executed only once when the script is loaded here.}\n}"
+      "run_once {",
+      "\t${1:// Add commands that execute once when the script loads.}",
+      "}"
     ],
     "description": "The run_once block"
   },
   "Labels": {
     "prefix": "labels",
     "body": [
-      "labels {\n\t${2://Add any constant labels here in a comma separated list.}\n}"
+      "labels {",
+      "\t${1:// Add constant labels here in a comma-separated list.}",
+      "}"
     ],
     "description": "The labels block"
   },
@@ -206,24 +214,52 @@
   "Insert for loop": {
     "prefix": "for",
     "body": [
-      "for(${1:init}; ${2:condition}; ${3:increment}){",
+      "for (${1:init}; ${2:condition}; ${3:increment}) {",
       "\t${4:// do something}",
       "}"
     ],
-    "description": "Insert a variable"
+    "description": "Insert a for loop"
   },
   "Insert switch statement": {
     "prefix": "switch",
     "body": [
-      "switch(${1:expression}){",
-      "\tcase(${2:constant1}):",
+      "switch (${1:expression}) {",
+      "\tcase ${2:constant1}:",
       "\t\t${3:// statements}",
       "\t\tbreak;",
       "\tdefault:",
       "\t\t${4:// default statements}",
+      "\t\tbreak;",
       "}"
     ],
-    "description": "Insert a variable"
+    "description": "Insert a switch statement"
+  },
+  "Insert do while": {
+    "prefix": "do",
+    "body": [
+      "do {",
+      "\t${1:// do something}",
+      "} while (${2:condition});"
+    ],
+    "description": "Insert a do-while loop"
+  },
+  "Insert struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:Name} {",
+      "\t${2:int} ${3:value};",
+      "};"
+    ],
+    "description": "Insert a struct declaration"
+  },
+  "Insert scenario function": {
+    "prefix": "scenario-function",
+    "body": [
+      "int scenario ${1:name}(${2}) {",
+      "\t${3:return 0;}",
+      "}"
+    ],
+    "description": "Insert a typed scenario function"
   },
   "Insert include": {
     "prefix": "include",
