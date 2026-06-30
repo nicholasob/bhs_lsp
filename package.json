@@ -89,8 +89,11 @@
 		"compile": "tsc -b",
 		"watch": "tsc -b -w",
 		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"test:semantics": "npm run compile && node scripts/regression-semantics.js",
+		"test:services": "npm run compile && node scripts/regression-services.js",
+		"test:regressions": "npm run compile && node scripts/regression-semantics.js && node scripts/regression-services.js",
 		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
-		"test": "sh ./scripts/e2e.sh"
+		"test": "npm run test:regressions && node scripts/verify-game-success-catalog.js && node scripts/verify-game-error-catalog.js"
 	},
 	"devDependencies": {
 		"@types/mocha": "^8.2.2",
