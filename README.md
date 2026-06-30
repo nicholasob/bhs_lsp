@@ -47,6 +47,7 @@ Useful commands:
 ```text
 npm run compile
 npm run lint
+npm test
 ```
 
 ## License
