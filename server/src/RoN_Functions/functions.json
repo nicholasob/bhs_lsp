@@ -463,12 +463,12 @@
     "arguments": [
       {
         "name": "real_num",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "A floating point value between 0 and 1",
-      "type": "real"
+      "type": "float"
     },
     "description": "Evaluates the math/trig operation",
     "notes": ""
@@ -592,29 +592,6 @@
     "notes": ""
   },
   {
-    "name": "at_least_military_buildings",
-    "arguments": [
-      {
-        "name": "who",
-        "type": "int"
-      },
-      {
-        "name": "num",
-        "type": "int"
-      },
-      {
-        "name": "res_type",
-        "type": "string"
-      }
-    ],
-    "return": {
-      "name": "1 if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Triggered by a player having a certain gather rate.",
-    "notes": "works the same as at_least_buildings () , except that it is triggered by a certain number of military buildings"
-  },
-  {
     "name": "at_least_military_units",
     "arguments": [
       {
@@ -722,12 +699,12 @@
     "arguments": [
       {
         "name": "real_num",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "A floating point value between 0 and 1",
-      "type": "real"
+      "type": "float"
     },
     "description": "Evaluates the math/trig operation",
     "notes": ""
@@ -771,21 +748,6 @@
     },
     "description": "Finds if the citizen build menu is open.",
     "notes": "works the same as build_menu_active , except it finds if the build military menu is open."
-  },
-  {
-    "name": "build_option_active",
-    "arguments": [
-      {
-        "name": "build_type",
-        "type": "string"
-      }
-    ],
-    "return": {
-      "name": "1 if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds if the specified citizen build menu option is selected.",
-    "notes": ""
   },
   {
     "name": "build_placement_warning",
@@ -998,26 +960,6 @@
     },
     "description": "Forces a player to buy 100 of a resource.",
     "notes": ""
-  },
-  {
-    "name": "camera_x",
-    "arguments": [],
-    "return": {
-      "name": "The game world X position of the camera if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds the current game world X position of the camera.",
-    "notes": ""
-  },
-  {
-    "name": "camera_y",
-    "arguments": [],
-    "return": {
-      "name": "The game world X position of the camera if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds the current game world X position of the camera.",
-    "notes": "works the same as camera_x , except it finds the game world Y position."
   },
   {
     "name": "can_buy_sell",
@@ -1521,12 +1463,12 @@
     "arguments": [
       {
         "name": "real_num",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "A floating point value between 0 and 1",
-      "type": "real"
+      "type": "float"
     },
     "description": "Evaluates the math/trig operation",
     "notes": ""
@@ -2480,8 +2422,7 @@
       }
     ],
     "return": {
-      "name": "A building ID if true or success, 0 if false, -1 if failed.",
-      "type": "int"
+      "type": "string"
     },
     "description": "Finds the building ID of a city by number built (i.e. capital is 1, second city is 2, etc.).",
     "notes": ""
@@ -3322,16 +3263,6 @@
     "notes": "works like get_mouse_screen_x, except it gets the mouse screen Y position."
   },
   {
-    "name": "get_no_nation_powers",
-    "arguments": [],
-    "return": {
-      "name": "1 if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds if the game is set to no nation powers.",
-    "notes": ""
-  },
-  {
     "name": "get_object_at_mouse",
     "arguments": [
       {
@@ -3363,21 +3294,6 @@
       "type": "int"
     },
     "description": "Triggered if a player has an object type at mouse location.",
-    "notes": ""
-  },
-  {
-    "name": "get_player_profile_name",
-    "arguments": [
-      {
-        "name": "who",
-        "type": "int"
-      }
-    ],
-    "return": {
-      "name": "A string value.",
-      "type": "string"
-    },
-    "description": "Finds the name of the current player profile.",
     "notes": ""
   },
   {
@@ -3417,25 +3333,6 @@
     },
     "description": "Finds the world X position of a rally point from a building.",
     "notes": "works the same as get_rally_x, except it finds the game world Y position."
-  },
-  {
-    "name": "get_repeat_orders",
-    "arguments": [
-      {
-        "name": "who",
-        "type": "int"
-      },
-      {
-        "name": "unit_o",
-        "type": "int"
-      }
-    ],
-    "return": {
-      "name": "1 if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds if planes have repeat orders turned on.",
-    "notes": ""
   },
   {
     "name": "get_resource_at_mouse",
@@ -3544,16 +3441,6 @@
       "type": "int"
     },
     "description": "Finds the size of a player’s starting city.",
-    "notes": ""
-  },
-  {
-    "name": "get_techs_per_age",
-    "arguments": [],
-    "return": {
-      "name": "The number of technologies needed to be researched to advance to the next age if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds the number of technologies needed to be researched to advance to the next age.",
     "notes": ""
   },
   {
@@ -4071,7 +3958,7 @@
     "notes": "works like have_alliance , except for it finds if a nation has contact with another nation."
   },
   {
-    "name": "have­_fought",
+    "name": "have_fought",
     "arguments": [
       {
         "name": "who",
@@ -4216,21 +4103,6 @@
       "type": "int"
     },
     "description": "Highlights an option in the game a specific user interface option button.",
-    "notes": ""
-  },
-  {
-    "name": "highlight_tech_option",
-    "arguments": [
-      {
-        "name": "option",
-        "type": "string"
-      }
-    ],
-    "return": {
-      "name": "1 if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Highlights a technology in the Library.",
     "notes": ""
   },
   {
@@ -4700,25 +4572,6 @@
     "notes": "works the same as is_offering_alliance, except it finds if a nation is offering another nation peace."
   },
   {
-    "name": "is_on_selected",
-    "arguments": [
-      {
-        "name": "x",
-        "type": "int"
-      },
-      {
-        "name": "y",
-        "type": "int"
-      }
-    ],
-    "return": {
-      "name": "1 if true or success, 0 if false, -1 if failed.",
-      "type": "int"
-    },
-    "description": "Finds if a specific game world location is on screen.",
-    "notes": ""
-  },
-  {
     "name": "is_on_transport",
     "arguments": [
       {
@@ -4812,7 +4665,7 @@
     "notes": ""
   },
   {
-    "name": "is­_victory_economic",
+    "name": "is_victory_economic",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4822,7 +4675,7 @@
     "notes": "works like is_victory_conquest , except that it checks if the victory condition is economic."
   },
   {
-    "name": "is­_victory_musical_chairs",
+    "name": "is_victory_musical_chairs",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4832,7 +4685,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is musical_chairs"
   },
   {
-    "name": "is­_victory_score",
+    "name": "is_victory_score",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4842,7 +4695,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is score."
   },
   {
-    "name": "is­_victory_standard",
+    "name": "is_victory_standard",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4852,7 +4705,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is standard."
   },
   {
-    "name": "is­_victory_sudden_death",
+    "name": "is_victory_sudden_death",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4862,7 +4715,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is sudden death."
   },
   {
-    "name": "is­_victory_tech_race",
+    "name": "is_victory_tech_race",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4872,7 +4725,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is a technology race."
   },
   {
-    "name": "is­_victory_territory",
+    "name": "is_victory_territory",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4882,7 +4735,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is territory."
   },
   {
-    "name": "is­_victory_time_limit",
+    "name": "is_victory_time_limit",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -4892,7 +4745,7 @@
     "notes": "works like is_victory_conquest, except that it checks if the victory condition is time limit."
   },
   {
-    "name": "is­_victory_wonder",
+    "name": "is_victory_wonder",
     "arguments": [],
     "return": {
       "name": "1 if true or success, 0 if false, -1 if failed.",
@@ -5469,16 +5322,16 @@
     "arguments": [
       {
         "name": "real_num1",
-        "type": "real"
+        "type": "float"
       },
       {
         "name": "real_num2",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "The largest value of the two.",
-      "type": "real"
+      "type": "float"
     },
     "description": "Returns the maximum of two numbers.",
     "notes": ""
@@ -7229,24 +7082,6 @@
     "notes": "works like build_placement_warning, except it is triggered if a player tries to build/research something but does not have the resources to pay for it."
   },
   {
-    "name": "ResourceTypesFoodTimberMetalOilWealthKnowledgeintgather_rate",
-    "arguments": [
-      {
-        "name": "who",
-        "type": "int"
-      },
-      {
-        "name": "res_type",
-        "type": "string"
-      }
-    ],
-    "return": {
-      "type": "void"
-    },
-    "description": "",
-    "notes": "Generated from Script Functions Listing syntax."
-  },
-  {
     "name": "revoke_offer",
     "arguments": [
       {
@@ -7866,12 +7701,12 @@
     "arguments": [
       {
         "name": "real_num",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "A floating point value between 0 and 1",
-      "type": "real"
+      "type": "float"
     },
     "description": "Evaluates the math/trig operation",
     "notes": ""
@@ -7965,12 +7800,12 @@
     "arguments": [
       {
         "name": "real_num",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "A floating point value between 0 and 1",
-      "type": "real"
+      "type": "float"
     },
     "description": "Evaluates the math/trig operation",
     "notes": ""
@@ -8126,12 +7961,12 @@
     "arguments": [
       {
         "name": "real_num",
-        "type": "real"
+        "type": "float"
       }
     ],
     "return": {
       "name": "A floating point value between 0 and 1",
-      "type": "real"
+      "type": "float"
     },
     "description": "Evaluates the math/trig operation",
     "notes": ""
@@ -8851,15 +8686,6 @@
     "notes": ""
   },
   {
-    "name": "UnitCategoriesFootMountedMechArtilleryCommandCivilianSail",
-    "arguments": [],
-    "return": {
-      "type": "void"
-    },
-    "description": "",
-    "notes": "Generated from Script Functions Listing syntax."
-  },
-  {
     "name": "use_advanced_menu",
     "arguments": [],
     "return": {
@@ -9255,5 +9081,5838 @@
     },
     "description": "unknown.",
     "notes": "This function is present in the game, but not in the documentation."
+  },
+  {
+    "name": "length",
+    "arguments": [
+      {
+        "name": "str",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "char_at",
+    "arguments": [
+      {
+        "name": "str",
+        "type": "string"
+      },
+      {
+        "name": "num_position",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "char_from_int",
+    "arguments": [
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "parse",
+    "arguments": [
+      {
+        "name": "string",
+        "type": "string"
+      },
+      {
+        "name": "params",
+        "type": "bool"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "print",
+    "arguments": [
+      {
+        "name": "value",
+        "type": "anytype"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "print_line",
+    "arguments": [
+      {
+        "name": "value",
+        "type": "anytype"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "add",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "add",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array",
+        "qualifier": "ref"
+      },
+      {
+        "name": "value",
+        "type": "anytype"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "remove",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array",
+        "qualifier": "ref"
+      },
+      {
+        "name": "value",
+        "type": "anytype"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "remove_index",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array",
+        "qualifier": "ref"
+      },
+      {
+        "name": "index",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "insert",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array",
+        "qualifier": "ref"
+      },
+      {
+        "name": "value",
+        "type": "anytype"
+      },
+      {
+        "name": "index",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "find",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array"
+      },
+      {
+        "name": "value",
+        "type": "anytype"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "array",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "rand_seed",
+    "arguments": [
+      {
+        "name": "num_new_seed",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "rand_get_seed",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_objective_loc",
+    "arguments": [
+      {
+        "name": "obj_id",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ping_group",
+    "arguments": [
+      {
+        "name": "who_from",
+        "type": "int"
+      },
+      {
+        "name": "whose_unit",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ping_group_all",
+    "arguments": [
+      {
+        "name": "who_from",
+        "type": "int"
+      },
+      {
+        "name": "whose_unit",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_explored",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_explored_show_buildings",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "is_seen",
+    "arguments": [
+      {
+        "name": "who_looker",
+        "type": "int"
+      },
+      {
+        "name": "who_object",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_percent_explored",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_plunder_scale",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "scale",
+        "type": "float"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_plunder_scale",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "float"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_player_profile_name",
+    "arguments": [],
+    "return": {
+      "name": "A string value.",
+      "type": "string"
+    },
+    "description": "Finds the name of the current player profile.",
+    "notes": ""
+  },
+  {
+    "name": "pause_game",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unpause_game",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "is_paused",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "is_human",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_players",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_human_players",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_ai_players",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_attack_from",
+    "arguments": [],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_attack_to",
+    "arguments": [],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_attack_turn",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_attack_age",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_attack_terr_str",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_ctw_int",
+    "arguments": [
+      {
+        "name": "str_id",
+        "type": "string"
+      },
+      {
+        "name": "num_val",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_ctw_str",
+    "arguments": [
+      {
+        "name": "str_id",
+        "type": "string"
+      },
+      {
+        "name": "str_val",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_ctw_int",
+    "arguments": [
+      {
+        "name": "str_id",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_ctw_str",
+    "arguments": [
+      {
+        "name": "str_id",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear_ctw_vals",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear_ctw_val",
+    "arguments": [
+      {
+        "name": "str_id",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_ctw_seed",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_country_owner",
+    "arguments": [
+      {
+        "name": "str_country",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_territory_owner",
+    "arguments": [
+      {
+        "name": "str_country",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_territory_owner",
+    "arguments": [
+      {
+        "name": "str_country",
+        "type": "string"
+      },
+      {
+        "name": "ignore_vassal_status",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_colony_owner",
+    "arguments": [
+      {
+        "name": "str_colony",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_times_played",
+    "arguments": [
+      {
+        "name": "str_cat",
+        "type": "string"
+      },
+      {
+        "name": "str_title",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_territories",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_turn",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_age",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_ally",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_peace",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_war",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_is_war",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_is_ally",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_is_peace",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_is_vassal",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_master",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_is_defeated",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_war",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_peace",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_ally",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_vassal",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_vassal",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_buy_war",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_buy_peace",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_buy_ally",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_buy_vassal",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_deal_accepted",
+    "arguments": [
+      {
+        "name": "str_deal_id",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_deal_accepted",
+    "arguments": [
+      {
+        "name": "str_deal_id",
+        "type": "string"
+      },
+      {
+        "name": "num_accept",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_territory_value",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_card_value",
+    "arguments": [
+      {
+        "name": "str_card",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_colony_value",
+    "arguments": [
+      {
+        "name": "str_colony",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_tribute",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_active_nations",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "give_player_bonus_card",
+    "arguments": [
+      {
+        "name": "str_card_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "give_bonus_card",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_card_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "give_player_ctw_tribute",
+    "arguments": [
+      {
+        "name": "num_val",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "give_ctw_tribute",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "num_val",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_give_army",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_remove_army",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_remove_all_armies",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_territory_has_army",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "disable_strategic_rares",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_strategic_rares",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_no_attack",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr1",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_no_attack",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_no_attack",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      },
+      {
+        "name": "str_terr3",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_no_attack",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      },
+      {
+        "name": "str_terr3",
+        "type": "string"
+      },
+      {
+        "name": "str_terr4",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_player_no_negotiate",
+    "arguments": [
+      {
+        "name": "str_help",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_nation_income",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_territory_income",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_territory_strength",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_territory_strength",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      },
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_territory_turns_held",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_territory_display_name",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      },
+      {
+        "name": "str_new_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_give_territory",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "num_get_trib_and_card",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_give_colony",
+    "arguments": [
+      {
+        "name": "str_col",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_remove_colony",
+    "arguments": [
+      {
+        "name": "str_col",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_colony_tribute",
+    "arguments": [
+      {
+        "name": "str_col",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_add_link",
+    "arguments": [
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_territory_link",
+    "arguments": [
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_territory_sea_link",
+    "arguments": [
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_ctw_campaign",
+    "arguments": [],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_num_campaign_turns",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_territory_captured",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      },
+      {
+        "name": "str_owner",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_territory_captured",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      },
+      {
+        "name": "str_owner",
+        "type": "string"
+      },
+      {
+        "name": "str_attacker",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_active_tribes",
+    "arguments": [
+      {
+        "name": "array",
+        "type": "float",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_num_adjacent_territories",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_player_nation",
+    "arguments": [],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_nation_capital",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_num_allies",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_game_over",
+    "arguments": [
+      {
+        "name": "num_victory",
+        "type": "int"
+      },
+      {
+        "name": "str_title",
+        "type": "string"
+      },
+      {
+        "name": "str_text",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_game_over",
+    "arguments": [
+      {
+        "name": "num_victory",
+        "type": "int"
+      },
+      {
+        "name": "num_marginal",
+        "type": "int"
+      },
+      {
+        "name": "str_title",
+        "type": "string"
+      },
+      {
+        "name": "str_text",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_custom_end_screen",
+    "arguments": [
+      {
+        "name": "str_title",
+        "type": "string"
+      },
+      {
+        "name": "str_text",
+        "type": "string"
+      },
+      {
+        "name": "str_image_file",
+        "type": "string"
+      },
+      {
+        "name": "str_button_text",
+        "type": "string"
+      },
+      {
+        "name": "victory_music",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_last_battle_victory",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_show_supply_depots",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_hide_supply_depots",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_ai_move_army",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_ai_set_attack",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_terr1",
+        "type": "string"
+      },
+      {
+        "name": "str_terr2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_reject_bribes",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_leader_name",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_reinforcements_arrived",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_center_camera",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_disable_piece_moves",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_enable_piece_moves",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_good_collected",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "res_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_last_type_built",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_last_unit_built",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_last_building_built",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_decoys",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "has_rare_resource",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "rename_type",
+    "arguments": [
+      {
+        "name": "type_old",
+        "type": "string"
+      },
+      {
+        "name": "type_new",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_type_job_time",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "seconds_to_build",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_unit_scale",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      },
+      {
+        "name": "real_scale",
+        "type": "float"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_unit_scale",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "float"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "real_time_millis",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "find_unit_upgrade",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "find_build_with_type_name",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "build_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "find_build_at_city_using_type_name",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "city_name",
+        "type": "string"
+      },
+      {
+        "name": "build_type",
+        "type": "string"
+      },
+      {
+        "name": "bool_count_inactive",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "at_least_villages",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "at_least_settlements",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "at_least_military_buildings",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "name": "1 if true or success, 0 if false, -1 if failed.",
+      "type": "int"
+    },
+    "description": "Triggered by a player having a certain gather rate.",
+    "notes": "works the same as at_least_buildings () , except that it is triggered by a certain number of military buildings"
+  },
+  {
+    "name": "less_than_settlements",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_techs_per_age",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "name": "The number of technologies needed to be researched to advance to the next age if true or success, 0 if false, -1 if failed.",
+      "type": "int"
+    },
+    "description": "Finds the number of technologies needed to be researched to advance to the next age.",
+    "notes": ""
+  },
+  {
+    "name": "city_captured_by",
+    "arguments": [
+      {
+        "name": "who_defend",
+        "type": "int"
+      },
+      {
+        "name": "who_attack",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_city_name",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "id",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_city_display_name",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "id",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "rename_city",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "original_name",
+        "type": "string"
+      },
+      {
+        "name": "new_city_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "rename_city",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "o",
+        "type": "int"
+      },
+      {
+        "name": "new_city_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_city_buildings_using_type_name",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "city_name",
+        "type": "string"
+      },
+      {
+        "name": "build_type",
+        "type": "string"
+      },
+      {
+        "name": "bool_count_inactive",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "resource_selected",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "select_object",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "who_target",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "select_group",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_rally",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "build_o",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "build_queue_percent_done",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "build_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_last_razed_building",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_any_killed",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "disable_unit_transport",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_unit_transport",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "build_option_selected",
+    "arguments": [
+      {
+        "name": "build_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_center_x",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_center_y",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_top",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_bottom",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_left",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_right",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_button_rect",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      },
+      {
+        "name": "screen_x_left",
+        "type": "int",
+        "qualifier": "ref"
+      },
+      {
+        "name": "screen_y_top",
+        "type": "int",
+        "qualifier": "ref"
+      },
+      {
+        "name": "screen_x_right",
+        "type": "int",
+        "qualifier": "ref"
+      },
+      {
+        "name": "screen_y_bottom",
+        "type": "int",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_objectives_top",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_objectives_bottom",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_objectives_left",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_objectives_right",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_screen_width",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_screen_height",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "toggle_infinite_queue",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "build_o",
+        "type": "int"
+      },
+      {
+        "name": "bool_on_or_off",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "create_missile_and_target_build",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "missile_type",
+        "type": "string"
+      },
+      {
+        "name": "who_target",
+        "type": "int"
+      },
+      {
+        "name": "build_target_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "create_missile_and_target_loc",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "missile_type",
+        "type": "string"
+      },
+      {
+        "name": "x_target",
+        "type": "int"
+      },
+      {
+        "name": "y_target",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_object_type_armor",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "new_armor",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_object_type_attack",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "new_attack",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_object_type_max_range",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "new_max_range",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_object_type_min_range",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "new_min_range",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_unit_type_speed",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "new_moves",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_craft",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_unit_craft",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "percent",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_unit_type_max_craft",
+    "arguments": [
+      {
+        "name": "unit_type",
+        "type": "string"
+      },
+      {
+        "name": "num_craftpoints",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_max_craft",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_patrol_order_queue",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_garrison_order",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "who_building",
+        "type": "int"
+      },
+      {
+        "name": "building_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_garrison_order",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "building_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_eject_order",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "spy_pilfer",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "who_target",
+        "type": "int"
+      },
+      {
+        "name": "build_o_target",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "special_forces_infiltrate",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "who_target",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "special_forces_sniper",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "who_target",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "special_forces_counterintel",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "target_who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "is_infiltrated_by",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      },
+      {
+        "name": "who_infiltrater",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "remove_infiltrated",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      },
+      {
+        "name": "infiltrater_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "remove_infiltrated",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "has_repeat_orders",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_patrol_order_queue",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_garrison_order",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "building_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_garrison_order",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "building_who",
+        "type": "int"
+      },
+      {
+        "name": "building_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_id",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_in_group",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "remove_from_group",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "is_in_group",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear_group",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "select_group",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ping_group",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "who_from",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ping_group_all",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "who_from",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_group_near",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "num_units",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "dist_radius",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_group_near_build",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "num_units",
+        "type": "int"
+      },
+      {
+        "name": "who_build",
+        "type": "int"
+      },
+      {
+        "name": "build_o",
+        "type": "int"
+      },
+      {
+        "name": "dist_radius",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_move_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_waypoint_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_explore_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_attack_to_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_patrol_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_patrol_order_queue",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_jump_move",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "num_angle",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_garrison_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_attack_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "attacked_who",
+        "type": "int"
+      },
+      {
+        "name": "attacked_id",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_guard_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "guard_who",
+        "type": "int"
+      },
+      {
+        "name": "guard_id",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_stance_order",
+    "arguments": [
+      {
+        "name": "group_name",
+        "type": "string"
+      },
+      {
+        "name": "stance",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "remove_from_group",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup",
+        "qualifier": "ref"
+      },
+      {
+        "name": "index",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_in_group",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear_group",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "select_group",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ping_group",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "who_from",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ping_group_all",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "who_from",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_group_near",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "num_units",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "dist_radius",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "unit_group_near_build",
+    "arguments": [
+      {
+        "name": "group",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "num_units",
+        "type": "int"
+      },
+      {
+        "name": "who_build",
+        "type": "int"
+      },
+      {
+        "name": "build_o",
+        "type": "int"
+      },
+      {
+        "name": "dist_radius",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_move_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_waypoint_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_explore_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_attack_to_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_patrol_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_patrol_order_queue",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_jump_move",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "num_angle",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_garrison_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_attack_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "attacked_who",
+        "type": "int"
+      },
+      {
+        "name": "attacked_id",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_guard_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "guard_who",
+        "type": "int"
+      },
+      {
+        "name": "guard_id",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "group_stance_order",
+    "arguments": [
+      {
+        "name": "g",
+        "type": "UnitGroup"
+      },
+      {
+        "name": "stance",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_base_rate",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "res_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_commerce_cap",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "res_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_bonus_cap",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "res_type",
+        "type": "string"
+      },
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_bonus_cap",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "res_type",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "make_peace",
+    "arguments": [
+      {
+        "name": "who_declarer",
+        "type": "int"
+      },
+      {
+        "name": "who_declaree",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "make_alliance",
+    "arguments": [
+      {
+        "name": "who_declarer",
+        "type": "int"
+      },
+      {
+        "name": "who_declaree",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_clear_offer",
+    "arguments": [
+      {
+        "name": "offer",
+        "type": "CtwOffer",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_contact",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "whom",
+        "type": "int"
+      },
+      {
+        "name": "onoff",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "zooming_lock_manual",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "zooming_lock_shortcuts",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "zooming_unlock_manual",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "zooming_unlock_shortcuts",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "open_file",
+    "arguments": [
+      {
+        "name": "filename",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "close_file",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_read_text",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_read_attrib",
+    "arguments": [
+      {
+        "name": "data_attrib",
+        "type": "string"
+      },
+      {
+        "name": "str_default",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_sort_entries",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      },
+      {
+        "name": "data_attrib",
+        "type": "string"
+      },
+      {
+        "name": "bool_sort_descending",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_curr_filename",
+    "arguments": [],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_next_entry",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_write_text",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      },
+      {
+        "name": "str_value",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_write_attrib",
+    "arguments": [
+      {
+        "name": "data_attrib",
+        "type": "string"
+      },
+      {
+        "name": "str_value",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_traverse_entries",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_remove",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_exists",
+    "arguments": [
+      {
+        "name": "filename",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_entry_exists",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_set_category",
+    "arguments": [
+      {
+        "name": "data_element",
+        "type": "string"
+      },
+      {
+        "name": "bool_use_existing",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_get_category",
+    "arguments": [],
+    "return": {
+      "type": "string"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "file_up_category",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_msg_color",
+    "arguments": [
+      {
+        "name": "str",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_msg_align",
+    "arguments": [
+      {
+        "name": "str",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "popup_choice",
+    "arguments": [
+      {
+        "name": "message_text",
+        "type": "string"
+      },
+      {
+        "name": "message_one",
+        "type": "string"
+      },
+      {
+        "name": "message_two",
+        "type": "string"
+      },
+      {
+        "name": "message_three",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "highlight_tech",
+    "arguments": [
+      {
+        "name": "option",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "bubble_text",
+    "arguments": [
+      {
+        "name": "str_text",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "bubble_text_obj",
+    "arguments": [
+      {
+        "name": "str_text",
+        "type": "string"
+      },
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "draw_screen_arrow_line",
+    "arguments": [
+      {
+        "name": "x1",
+        "type": "int"
+      },
+      {
+        "name": "y1",
+        "type": "int"
+      },
+      {
+        "name": "x2",
+        "type": "int"
+      },
+      {
+        "name": "y2",
+        "type": "int"
+      },
+      {
+        "name": "seconds",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "cancel_arrow",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear_all_arrows",
+    "arguments": [],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "start_screen_arrow",
+    "arguments": [
+      {
+        "name": "x1",
+        "type": "int"
+      },
+      {
+        "name": "y1",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "start_ping_arrow",
+    "arguments": [
+      {
+        "name": "x1",
+        "type": "int"
+      },
+      {
+        "name": "y1",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "add_arrow_point",
+    "arguments": [
+      {
+        "name": "x1",
+        "type": "int"
+      },
+      {
+        "name": "y1",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "draw_arrow_curve",
+    "arguments": [
+      {
+        "name": "seconds",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_arrow_color",
+    "arguments": [
+      {
+        "name": "color",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_arrow_thick",
+    "arguments": [
+      {
+        "name": "real_num_thick",
+        "type": "float"
+      }
+    ],
+    "return": {
+      "type": "void"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "citizen_to_militia",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "militia_to_citizen",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "scout_counter_intel",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "unit_o",
+        "type": "int"
+      },
+      {
+        "name": "who_target",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_capital",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "city_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "num_rare_resources",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_type_line_of_sight",
+    "arguments": [
+      {
+        "name": "type_name",
+        "type": "string"
+      },
+      {
+        "name": "line_of_sight",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "disable_type_by_tribe",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "tribe_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_type_by_tribe",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "tribe_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_type_by_tribe",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "tribe_name",
+        "type": "string"
+      },
+      {
+        "name": "building_type",
+        "type": "string"
+      },
+      {
+        "name": "row",
+        "type": "int"
+      },
+      {
+        "name": "column",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_type_by_tribe_with_type_name",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "tribe_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_type_by_tribe_with_type_name",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "tribe_name",
+        "type": "string"
+      },
+      {
+        "name": "building_type",
+        "type": "string"
+      },
+      {
+        "name": "row",
+        "type": "int"
+      },
+      {
+        "name": "column",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_preq",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "type_preq",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_preq",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "type_preq1",
+        "type": "string"
+      },
+      {
+        "name": "type_preq2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_preq",
+    "arguments": [
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "type_preq1",
+        "type": "string"
+      },
+      {
+        "name": "type_preq2",
+        "type": "string"
+      },
+      {
+        "name": "type_preq3",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_age_diff_penalty",
+    "arguments": [
+      {
+        "name": "num_age_diff",
+        "type": "int"
+      },
+      {
+        "name": "num_percent",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "find_resource",
+    "arguments": [
+      {
+        "name": "resource_name",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "resource_position_x",
+    "arguments": [
+      {
+        "name": "resource_num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "resource_position_y",
+    "arguments": [
+      {
+        "name": "resource_num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "object_ignore_orders",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "object_obey_orders",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "add_infiltrated",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "object_o",
+        "type": "int"
+      },
+      {
+        "name": "infiltrater_who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_add_objective",
+    "arguments": [
+      {
+        "name": "message",
+        "type": "string"
+      },
+      {
+        "name": "obj_id",
+        "type": "string"
+      },
+      {
+        "name": "sound",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_change_objective_text",
+    "arguments": [
+      {
+        "name": "obj_id",
+        "type": "string"
+      },
+      {
+        "name": "message",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_objective_sound",
+    "arguments": [
+      {
+        "name": "obj_id",
+        "type": "string"
+      },
+      {
+        "name": "sound",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_objective_loc",
+    "arguments": [
+      {
+        "name": "obj_id",
+        "type": "string"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_play_objective_sound",
+    "arguments": [
+      {
+        "name": "obj_id",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_remove_objective",
+    "arguments": [
+      {
+        "name": "obj_id",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_clear_objectives",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_ai_launch_nukes",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_remove_nuke",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_build_nuke",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      },
+      {
+        "name": "pay_cost",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_get_nuke_cost",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_num_nukes",
+    "arguments": [
+      {
+        "name": "str_terr",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_total_nukes",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_disable_nuke_building",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_enable_nuke_building",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_defcon_level",
+    "arguments": [
+      {
+        "name": "num",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_defcon_level",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_disable_espionage",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_enable_espionage",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_bonus_card_list",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_list",
+        "type": "anytype",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_territory_list",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_list",
+        "type": "anytype",
+        "qualifier": "ref"
+      },
+      {
+        "name": "num_include_vassals",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_colony_list",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      },
+      {
+        "name": "str_list",
+        "type": "anytype",
+        "qualifier": "ref"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_ai_no_declare_war",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_clear_ai_no_declare_war",
+    "arguments": [
+      {
+        "name": "str_tribe1",
+        "type": "string"
+      },
+      {
+        "name": "str_tribe2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_set_sub_goals",
+    "arguments": [
+      {
+        "name": "str_goal1",
+        "type": "string"
+      },
+      {
+        "name": "str_goal2",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_enable_gunpowder",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_disable_gunpowder",
+    "arguments": [
+      {
+        "name": "str_tribe",
+        "type": "string"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "ctw_clear_bribes",
+    "arguments": [],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "show_notice",
+    "arguments": [
+      {
+        "name": "text_string",
+        "type": "string"
+      },
+      {
+        "name": "image_name",
+        "type": "string"
+      },
+      {
+        "name": "who_color",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_take_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "disable_take_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_give_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "disable_give_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "enable_building_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "disable_building_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_neutral_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "attrition_level",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "get_neutral_attrition",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "attrition_level",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "set_attrition_free_point",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      },
+      {
+        "name": "x",
+        "type": "int"
+      },
+      {
+        "name": "y",
+        "type": "int"
+      },
+      {
+        "name": "radius",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
+  },
+  {
+    "name": "clear_attrition_free_points",
+    "arguments": [
+      {
+        "name": "who",
+        "type": "int"
+      }
+    ],
+    "return": {
+      "type": "int"
+    },
+    "description": "",
+    "notes": "Extracted from internal game function table."
   }
 ]
