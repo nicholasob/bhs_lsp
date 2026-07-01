@@ -1,4 +1,4 @@
-import functions from '../RoN_Functions/functions.json';
+import functions from '../builtins/functions.json';
 import { addFunctionSignature, FunctionSignatureMap } from '../core/types';
 
 interface BuiltinArgument {
