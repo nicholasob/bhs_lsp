@@ -23,8 +23,6 @@ built-in functions.
 
 [Documentation](files/scenario_editor_docs.zip)
 
-Note: Many functions are missing from the documentation. For instance, `close_file` and `unit_ignore_orders` are both listed in the "Insert Trigger Function..." menu and compile successfully, but are not documented.
-
 ## Development
 
 The validation pipeline is intentionally separated by responsibility:
